@@ -27,5 +27,5 @@ Controller: Excluído todas as classes exixtentes e adicionado a classe ServletC
 DAO: EmpresaDAO.java, ConjuntoDAO.java
 Command: Adicionado diretório novo com classes CadastrarEmpresa.java, Command.java, CriarEmpresa.java, EditarEmpresa.java, ExcluirEmpresa.java, ListarEmpresasBuscar.java, VisualizarEmpresa.java
 
-Atualização 2017/05/18
+Atualização 2017/08/24
 CRUD DE USUÁRIO - JSON
