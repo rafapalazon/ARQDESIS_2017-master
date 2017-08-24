@@ -26,3 +26,6 @@ Model: Empresa.java, Conjunto.java
 Controller: Excluído todas as classes exixtentes e adicionado a classe ServletController.java
 DAO: EmpresaDAO.java, ConjuntoDAO.java
 Command: Adicionado diretório novo com classes CadastrarEmpresa.java, Command.java, CriarEmpresa.java, EditarEmpresa.java, ExcluirEmpresa.java, ListarEmpresasBuscar.java, VisualizarEmpresa.java
+
+Atualização 2017/05/18
+CRUD DE USUÁRIO - JSON
