@@ -1,0 +1,53 @@
+create DATABASE SCP;
+
+use SCP;
+
+CREATE TABLE usuario
+(
+id_usuario INT AUTO_INCREMENT NOT NULL,
+cpf CHAR(11) NOT NULL,
+nome VARCHAR(45) NOT NULL,
+login VARCHAR(45) NOT NULL,
+senha VARCHAR(10) NOT NULL,
+dataNascimento DATE NOT NULL,
+sexo VARCHAR(9) NOT NULL,
+endereco VARCHAR(60) NOT NULL,
+cep CHAR(8) NOT NULL,
+telefone VARCHAR(15) NOT NULL,
+email VARCHAR(60) NOT NULL,
+conta VARCHAR(11) NOT NULL,
+acesso VARCHAR(8) NOT NULL,
+PRIMARY KEY (id_usuario)
+)
+ENGINE = InnoDB;
+
+ALTER TABLE usuario AUTO_INCREMENT = 1001;
+
+CREATE TABLE empresa
+(
+id_empresa INT AUTO_INCREMENT NOT NULL,
+cnpj CHAR(18) NOT NULL,
+razaoSocial VARCHAR(45) NOT NULL,
+nomeFantasia VARCHAR(45) NOT NULL,
+horarioInicio TIME NOT NULL,
+horarioFim TIME NOT NULL,
+temperatura INTEGER NOT NULL,
+horLigarAC TIME NOT NULL,
+horDesligarAC TIME NOT NULL,
+PRIMARY KEY (id_empresa)
+)
+ENGINE = InnoDB;
+
+ALTER TABLE empresa AUTO_INCREMENT = 9001;
+
+CREATE TABLE conjunto
+(
+id_conjunto INT AUTO_INCREMENT NOT NULL,
+numeroConjunto INT NOT NULL,
+status CHAR(1) NOT NULL,
+id_empresa INT,
+PRIMARY KEY (id_conjunto),
+FOREIGN KEY (id_empresa) REFERENCES empresa (id_empresa) ON DELETE CASCADE ON UPDATE CASCADE
+)
+ENGINE = InnoDB;
+
